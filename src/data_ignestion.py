@@ -3,6 +3,7 @@ from sqlalchemy import create_engine, text
 from sqlalchemy import MetaData, Table
 import pandas as pd
 import pymysql
+from collections import defaultdict
 
 
 def get_mysql_engine(user: str, password: str, host: str, port: int, db_name: str):
@@ -88,3 +89,37 @@ def extract_all_tables_with_relations(source_engine, mysql_engine):
         print(f"[DB] Error during full schema migration: {e}")
 
 
+def parse_schema(raw_schema: list, db_name: str) -> dict:
+    """
+    Parse MySQL schema rows into a table → [(col, type)] mapping.
+    Skips rows where table name == database name.
+    """
+    from collections import defaultdict
+
+    table_columns = defaultdict(list)
+
+    for row in raw_schema:
+        table = row[2]  # table name
+        column = row[3]
+        datatype = row[7]
+
+        # ✅ Filter out rows where the table name is actually the database name
+        if table.lower() != db_name.lower():
+            table_columns[table].append((column, datatype))
+
+    return table_columns
+
+
+def format_schema_for_embedding(table_columns: dict) -> list[str]:
+    formatted = []
+    for table, columns in table_columns.items():
+        cols = ", ".join([f"{col} ({dtype})" for col, dtype in columns])
+        formatted.append(f"Table: {table} | Columns: {cols}")
+    return formatted    
+
+
+def format_relationships_for_llm(rows):
+    rels = []
+    for r in rows:
+        rels.append(f"{r['child_table']}.{r['child_column']} → {r['parent_table']}.{r['parent_column']}")
+    return "Relationships:\n" + "\n".join(f"- {r}" for r in rels)
