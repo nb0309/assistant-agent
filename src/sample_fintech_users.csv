@@ -1,0 +1,101 @@
+user_id,name,email,platform,signup_date,plan,start_date,end_date,status,payment_date,payment_amount,payment_method,event_type,event_time,session_duration,downgrade_reason
+1,Ashley,owilliams@thomas.com,Android,05-06-2023,Family,05-06-2023,,Active,11-03-2024,299,UPI,login,14-10-2023 07:39,429,Limited features
+2,Christopher,christopher31@pham.org,Web,31-08-2024,Premium,31-08-2024,22-12-2024,Active,29-01-2025,399,Card,login,16-09-2024 00:19,563,Limited features
+3,Lindsay,smithelizabeth@williams.biz,Android,15-05-2023,Premium,15-05-2023,03-01-2025,Cancelled,17-07-2023,299,Card,purchase,16-06-2024 03:35,741,Limited features
+4,Sheena,matthewhernandez@anthony-travis.com,iOS,01-06-2023,Family,01-06-2023,,Active,26-07-2024,299,UPI,purchase,22-02-2025 14:59,789,Limited features
+5,Dylan,pottermary@hotmail.com,Android,10-07-2024,Free,10-07-2024,,Active,29-12-2024,0,UPI,search,14-11-2024 03:05,814,Limited features
+6,Richard,lholland@gmail.com,Android,15-01-2024,Family,15-01-2024,07-04-2025,Downgraded,10-02-2025,399,Card,search,23-01-2024 21:27,157,Limited features
+7,Jason,snyderkathleen@gibbs-lee.com,Android,22-09-2023,Premium,22-09-2023,,Active,12-12-2024,0,PayPal,purchase,11-10-2024 15:55,237,Limited features
+8,Jose,iolsen@yahoo.com,iOS,14-11-2024,Free,14-11-2024,,Active,08-04-2025,0,UPI,purchase,12-01-2025 03:11,642,Limited features
+9,Richard,robertjohnson@henderson-cook.org,Web,30-04-2024,Premium,30-04-2024,,Active,09-06-2024,399,PayPal,purchase,06-10-2024 16:35,412,Limited features
+10,Theresa,barbermichelle@gmail.com,Web,05-03-2025,Premium,05-03-2025,,Active,20-03-2025,0,Card,login,29-03-2025 21:38,710,Limited features
+11,Jason,tara32@richardson-murray.com,Android,16-07-2023,Premium,16-07-2023,,Active,30-03-2024,399,PayPal,search,30-07-2024 17:48,948,Limited features
+12,Christina,zthornton@hotmail.com,Android,20-10-2024,Free,20-10-2024,,Active,04-02-2025,0,UPI,logout,27-02-2025 21:08,307,Limited features
+13,Victoria,gordonlauren@hotmail.com,Android,23-01-2025,Free,23-01-2025,20-03-2025,Active,29-03-2025,0,PayPal,login,09-02-2025 10:19,984,Limited features
+14,Jacob,johnsonjessica@smith.com,Android,20-09-2024,Family,20-09-2024,28-01-2025,Cancelled,07-04-2025,399,PayPal,logout,21-12-2024 00:10,859,Limited features
+15,Kelsey,ddixon@gmail.com,iOS,17-04-2023,Premium,17-04-2023,,Active,26-03-2024,399,Card,logout,18-10-2023 13:13,435,Limited features
+16,Janet,jonathon27@avery.biz,Android,07-02-2024,Family,07-02-2024,19-10-2024,Cancelled,08-11-2024,0,Card,search,31-05-2024 04:50,460,Limited features
+17,Deborah,gevans@wall.com,iOS,11-09-2024,Free,11-09-2024,,Active,18-10-2024,0,UPI,logout,09-04-2025 19:31,784,Limited features
+18,Anna,melissa67@hotmail.com,Web,15-02-2025,Free,15-02-2025,,Active,20-02-2025,0,UPI,purchase,05-03-2025 07:22,134,Limited features
+19,Vicki,palmerkerry@hotmail.com,Android,05-01-2025,Family,05-01-2025,,Active,06-01-2025,0,UPI,search,14-01-2025 11:33,837,Limited features
+20,James,osims@johnson-morris.org,Android,04-01-2025,Family,04-01-2025,,Active,30-01-2025,299,PayPal,login,10-01-2025 11:58,685,Limited features
+21,Courtney,rglenn@gmail.com,iOS,29-06-2024,Family,29-06-2024,18-12-2024,Active,20-10-2024,399,PayPal,login,03-03-2025 00:36,371,Limited features
+22,Ernest,brianskinner@gonzalez-mitchell.com,Android,21-01-2024,Family,21-01-2024,,Active,21-02-2025,199,PayPal,login,05-04-2025 23:04,676,Limited features
+23,Audrey,gabrielawalker@yahoo.com,Android,16-08-2023,Family,16-08-2023,30-03-2025,Active,19-05-2024,399,UPI,search,09-08-2024 20:58,506,Limited features
+24,Barbara,ryanmathews@yahoo.com,Web,14-01-2024,Family,14-01-2024,06-08-2024,Downgraded,31-03-2025,299,UPI,login,27-04-2024 21:50,516,Limited features
+25,Daniel,joshua66@gmail.com,Android,19-06-2024,Free,19-06-2024,,Active,27-10-2024,0,UPI,purchase,11-07-2024 03:08,411,Limited features
+26,Kimberly,jamieserrano@ford.com,Android,17-06-2024,Premium,17-06-2024,,Active,15-10-2024,199,UPI,logout,15-10-2024 15:55,626,Limited features
+27,Shawn,hjones@gmail.com,Web,18-09-2023,Free,18-09-2023,12-11-2023,Active,27-04-2024,0,Card,login,14-06-2024 02:54,200,Limited features
+28,Juan,william47@hotmail.com,Web,23-02-2025,Family,23-02-2025,13-03-2025,Downgraded,09-04-2025,299,UPI,purchase,05-04-2025 03:50,949,Not useful
+29,James,brobertson@griffin.info,iOS,19-05-2023,Family,19-05-2023,,Active,07-02-2025,199,UPI,login,16-01-2025 22:26,433,Not useful
+30,Michael,melissa01@rodriguez-osborn.com,iOS,15-12-2024,Free,15-12-2024,29-01-2025,Downgraded,20-01-2025,0,UPI,logout,13-03-2025 10:27,482,Switched to competitor
+31,Frederick,mcdanielpatricia@rivera-collins.net,Android,10-06-2023,Free,10-06-2023,,Active,07-10-2024,0,PayPal,logout,11-02-2024 19:24,949,Switched to competitor
+32,Robert,slong@gmail.com,Android,03-08-2024,Free,03-08-2024,,Active,01-10-2024,0,Card,logout,15-09-2024 18:55,798,Switched to competitor
+33,Scott,jamessnyder@johnson.com,iOS,21-11-2023,Free,21-11-2023,,Active,04-12-2023,0,Card,purchase,26-08-2024 00:10,841,Switched to competitor
+34,Andrew,kylewoods@yahoo.com,Web,12-11-2024,Family,12-11-2024,01-12-2024,Cancelled,21-12-2024,0,PayPal,purchase,06-12-2024 20:40,830,Switched to competitor
+35,Yolanda,latoyawoodward@yahoo.com,iOS,18-08-2024,Premium,18-08-2024,,Active,10-02-2025,0,Card,login,22-01-2025 08:40,633,Switched to competitor
+36,Cody,jason07@hotmail.com,Web,04-08-2023,Family,04-08-2023,30-12-2024,Active,21-01-2024,399,UPI,search,09-08-2023 08:04,448,Switched to competitor
+37,Jennifer,qramirez@yahoo.com,Web,19-08-2024,Premium,19-08-2024,20-01-2025,Downgraded,28-09-2024,399,Card,login,26-02-2025 06:45,286,Switched to competitor
+38,David,theresaquinn@johnson.info,iOS,05-02-2024,Family,05-02-2024,,Active,03-11-2024,199,UPI,purchase,13-02-2024 04:52,282,Switched to competitor
+39,William,terrimooney@taylor.org,Android,08-03-2025,Premium,08-03-2025,,Active,16-03-2025,399,PayPal,login,10-04-2025 01:11,982,Switched to competitor
+40,Matthew,ismith@gay.net,iOS,29-11-2023,Free,29-11-2023,,Active,09-04-2024,0,PayPal,purchase,31-08-2024 00:08,918,Switched to competitor
+41,Suzanne,kaylee87@gmail.com,Android,20-07-2024,Free,20-07-2024,18-01-2025,Active,08-10-2024,0,UPI,purchase,03-08-2024 05:52,974,Switched to competitor
+42,Tyler,terrellcynthia@hotmail.com,Android,04-08-2024,Family,04-08-2024,02-04-2025,Cancelled,08-03-2025,399,PayPal,logout,11-03-2025 04:04,638,Switched to competitor
+43,Wyatt,madison25@gmail.com,Android,06-07-2023,Family,06-07-2023,12-12-2024,Downgraded,07-07-2023,299,PayPal,login,26-12-2024 22:07,640,Not useful
+44,Timothy,martindebra@yahoo.com,Web,18-02-2024,Premium,18-02-2024,24-12-2024,Active,12-07-2024,0,Card,search,12-10-2024 06:19,173,Not useful
+45,Randy,xmoon@gmail.com,Web,19-06-2023,Premium,19-06-2023,02-08-2023,Cancelled,05-02-2024,399,PayPal,login,14-03-2025 20:37,888,Not useful
+46,Angela,danielflores@pena.com,Android,04-02-2025,Premium,04-02-2025,,Active,19-02-2025,399,Card,purchase,01-04-2025 00:01,908,Not useful
+47,Alyssa,eileen33@yahoo.com,iOS,23-05-2023,Premium,23-05-2023,,Active,31-07-2023,299,PayPal,login,20-12-2024 04:59,987,Not useful
+48,Matthew,alandry@henry-vasquez.net,Web,04-12-2023,Family,04-12-2023,,Active,17-08-2024,399,UPI,search,08-04-2025 19:31,215,Not useful
+49,Kelly,rmiller@hotmail.com,Web,16-11-2023,Free,16-11-2023,02-04-2024,Downgraded,18-10-2024,0,UPI,search,21-10-2024 05:25,141,Not useful
+50,George,sarahbrooks@hodges.com,Web,23-09-2023,Free,23-09-2023,,Active,10-01-2025,0,PayPal,login,22-01-2025 14:09,1000,Not useful
+51,Linda,monicacarter@yahoo.com,iOS,10-04-2024,Premium,10-04-2024,,Active,05-04-2025,299,Card,logout,14-05-2024 04:42,621,Not useful
+52,Crystal,hgreen@coleman.info,iOS,26-10-2023,Free,26-10-2023,,Active,26-01-2024,0,UPI,logout,28-12-2023 12:09,316,Not useful
+53,Jacob,steven91@archer.com,Android,14-09-2024,Free,14-09-2024,15-03-2025,Active,10-03-2025,0,UPI,purchase,20-10-2024 22:34,146,Not useful
+54,Robert,kimberly39@bruce.com,iOS,07-12-2023,Free,07-12-2023,,Active,18-04-2024,0,PayPal,purchase,27-04-2024 07:18,346,Not useful
+55,Nichole,lawrencetaylor@hotmail.com,iOS,04-11-2023,Family,04-11-2023,,Active,30-03-2024,399,Card,search,22-02-2025 00:28,343,Not useful
+56,James,kyle79@dougherty.info,Android,11-04-2024,Premium,11-04-2024,17-02-2025,Active,11-09-2024,0,UPI,search,09-07-2024 06:22,620,Not useful
+57,Joshua,shannonherman@jordan.net,iOS,30-09-2024,Family,30-09-2024,10-01-2025,Cancelled,03-02-2025,299,PayPal,login,24-01-2025 03:28,645,Not useful
+58,Amanda,christina07@yahoo.com,Web,05-05-2023,Free,05-05-2023,30-11-2024,Active,11-03-2024,0,Card,logout,15-06-2023 13:27,290,Not useful
+59,Pam,jenniferbeck@wolfe.biz,Android,01-02-2024,Free,01-02-2024,26-09-2024,Active,27-02-2025,0,Card,purchase,06-10-2024 06:34,152,Not useful
+60,Francisco,priceaustin@lewis-schultz.org,Android,14-04-2023,Free,14-04-2023,,Active,25-08-2023,0,PayPal,search,15-12-2023 20:14,504,Not useful
+61,James,daniel80@yahoo.com,Web,10-07-2023,Free,10-07-2023,,Active,05-02-2024,0,UPI,login,01-12-2024 00:56,667,Not useful
+62,Patrick,brentsalas@caldwell.net,Android,12-09-2024,Premium,12-09-2024,,Active,02-12-2024,299,UPI,login,30-03-2025 19:48,782,Not useful
+63,Jennifer,amiller@yahoo.com,Web,30-10-2024,Free,30-10-2024,05-02-2025,Downgraded,01-04-2025,0,Card,logout,06-03-2025 20:02,827,Too expensive
+64,Jennifer,frodriguez@yahoo.com,iOS,07-03-2025,Free,07-03-2025,15-03-2025,Downgraded,05-04-2025,0,UPI,purchase,16-03-2025 02:43,244,Found better app
+65,Jesse,carol90@ramirez.com,Web,15-07-2024,Premium,15-07-2024,06-08-2024,Downgraded,24-12-2024,199,PayPal,search,30-01-2025 08:59,940,Found better app
+66,Dylan,holly18@avila.com,Web,03-10-2023,Family,03-10-2023,12-10-2023,Active,28-05-2024,299,Card,search,20-10-2023 13:52,720,Found better app
+67,Cameron,oliverlisa@long.com,Android,24-07-2023,Free,24-07-2023,,Active,14-01-2025,0,Card,login,08-12-2023 03:27,709,Found better app
+68,Douglas,ashley18@edwards.com,Android,01-12-2023,Family,01-12-2023,,Active,14-02-2024,399,Card,login,04-08-2024 23:09,570,Found better app
+69,Madeline,joshua46@wise-richardson.com,iOS,01-11-2024,Free,01-11-2024,,Active,06-02-2025,0,Card,purchase,21-03-2025 08:21,548,Found better app
+70,Robert,suzanne99@pittman.biz,iOS,09-11-2024,Family,09-11-2024,22-03-2025,Active,20-01-2025,199,Card,logout,07-04-2025 09:14,911,Found better app
+71,Chad,andreafrancis@gmail.com,Web,14-04-2024,Family,14-04-2024,14-08-2024,Cancelled,21-12-2024,0,PayPal,logout,24-04-2024 16:18,660,Found better app
+72,Ashley,marclopez@yahoo.com,Android,02-12-2024,Premium,02-12-2024,02-03-2025,Cancelled,21-12-2024,199,PayPal,login,25-02-2025 22:54,591,Found better app
+73,Yvonne,ashleybarnett@yahoo.com,Android,26-02-2024,Free,26-02-2024,,Active,24-02-2025,0,Card,logout,02-03-2025 15:59,296,Found better app
+74,Lisa,karenscott@wood.biz,Android,13-06-2023,Family,13-06-2023,,Active,04-04-2024,0,UPI,search,27-02-2025 15:45,926,Found better app
+75,Lindsey,smithjason@gmail.com,iOS,16-06-2024,Free,16-06-2024,,Active,28-03-2025,0,PayPal,purchase,23-12-2024 12:02,396,Found better app
+76,Jeffery,dennis44@marquez.net,iOS,05-10-2024,Family,05-10-2024,,Active,09-04-2025,0,Card,search,11-03-2025 12:09,888,Found better app
+77,Kimberly,stantondavid@gmail.com,Android,11-05-2024,Free,11-05-2024,,Active,13-08-2024,0,UPI,purchase,26-02-2025 05:48,451,Found better app
+78,Christian,aaronrubio@ramos.com,Web,27-01-2024,Family,27-01-2024,24-03-2025,Active,03-02-2025,399,PayPal,logout,08-06-2024 20:32,690,Found better app
+79,Michael,brentyoung@hotmail.com,Web,02-02-2024,Free,02-02-2024,,Active,21-10-2024,0,PayPal,search,06-04-2024 17:10,609,Found better app
+80,Lawrence,davidbryant@martin-owens.com,Android,12-02-2024,Free,12-02-2024,22-06-2024,Downgraded,26-12-2024,0,PayPal,login,02-04-2024 00:13,395,Switched to competitor
+81,Pamela,angelaayala@gmail.com,Web,17-12-2024,Premium,17-12-2024,21-03-2025,Active,30-12-2024,199,Card,login,04-01-2025 17:05,345,Switched to competitor
+82,Bryan,barnesjoseph@yahoo.com,Android,25-06-2024,Premium,25-06-2024,,Active,26-09-2024,399,PayPal,search,04-10-2024 02:14,351,Switched to competitor
+83,Tamara,gregoryjones@taylor.com,iOS,15-03-2024,Family,15-03-2024,09-04-2024,Downgraded,17-11-2024,399,UPI,logout,08-12-2024 20:53,338,Switched to competitor
+84,Diana,davidconway@collins-terry.com,iOS,30-04-2023,Free,30-04-2023,28-02-2024,Cancelled,27-05-2024,0,PayPal,logout,24-03-2025 07:54,656,Switched to competitor
+85,Brian,natashabrown@yahoo.com,Web,19-09-2023,Premium,19-09-2023,11-09-2024,Downgraded,03-01-2025,299,PayPal,logout,19-02-2025 02:33,876,Not useful
+86,Samantha,bryan51@gmail.com,Web,19-11-2024,Premium,19-11-2024,,Active,05-04-2025,199,PayPal,logout,07-03-2025 15:28,653,Not useful
+87,Melissa,mirandazuniga@phillips-baker.com,Web,19-10-2023,Premium,19-10-2023,08-03-2024,Cancelled,17-01-2024,299,PayPal,search,06-01-2025 02:21,804,Not useful
+88,Amanda,wendygreen@walker.com,Web,21-07-2024,Premium,21-07-2024,,Active,22-09-2024,199,Card,purchase,28-12-2024 08:33,330,Not useful
+89,Teresa,marshallmarc@hicks.biz,Android,17-01-2024,Free,17-01-2024,,Active,16-01-2025,0,PayPal,logout,09-06-2024 11:32,741,Not useful
+90,Cathy,franklinwilliam@yahoo.com,iOS,16-08-2024,Premium,16-08-2024,,Active,18-01-2025,399,Card,purchase,06-02-2025 10:33,585,Not useful
+91,Lori,brendansawyer@thompson-sanders.com,iOS,17-03-2024,Family,17-03-2024,12-07-2024,Active,20-06-2024,299,Card,purchase,15-01-2025 00:00,996,Not useful
+92,John,clintonmueller@davis.com,Android,22-12-2023,Free,22-12-2023,23-05-2024,Cancelled,21-03-2024,0,PayPal,purchase,24-01-2024 15:27,805,Not useful
+93,Kelly,joseph43@yahoo.com,Android,14-01-2025,Family,14-01-2025,,Active,25-01-2025,0,PayPal,search,17-01-2025 08:36,509,Not useful
+94,Lisa,davidray@wilson.com,Android,21-09-2023,Free,21-09-2023,13-01-2024,Active,05-12-2024,0,UPI,search,22-10-2023 19:30,748,Not useful
+95,Alisha,mbarr@ball-garcia.com,Android,17-09-2024,Free,17-09-2024,17-02-2025,Downgraded,11-03-2025,0,PayPal,logout,06-12-2024 10:44,505,Not useful
+96,Jason,mullenregina@yahoo.com,Web,31-01-2025,Free,31-01-2025,16-02-2025,Active,18-02-2025,0,UPI,login,11-03-2025 12:47,848,Not useful
+97,Kyle,steven45@moore.net,Web,08-01-2025,Free,08-01-2025,,Active,12-03-2025,0,PayPal,purchase,14-03-2025 10:50,296,Not useful
+98,Carla,gray@lin.com,Web,16-08-2024,Free,16-08-2024,05-09-2024,Downgraded,18-01-2025,0,Card,logout,28-12-2024 22:14,790,Found better app
+99,Peter,katherine45@gmail.com,Web,19-03-2024,Premium,19-03-2024,23-06-2024,Active,06-10-2024,399,UPI,search,01-09-2024 14:30,632,Found better app
+100,Christopher,cheryl65@yahoo.com,Web,17-10-2024,Free,17-10-2024,28-10-2024,Cancelled,03-12-2024,0,Card,logout,07-01-2025 05:43,352,Found better app

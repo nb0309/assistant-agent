@@ -1,7 +1,12 @@
 from conversation_agent import ConversationAgent
 from schema_agent import PineconeDB
+from data_ignestion import get_mysql_engine, extract_from_csv
 
 
+sql_engine=get_mysql_engine(user="root",password="nava",host="localhost",port=3306,db_name="newcompany")
+df=extract_from_csv(filepath="sample_fintech_users.csv",table_name="newcompany",mysql_engine=sql_engine)
+dataf=df.get("data")
+dataf.head()
 conversation_config = {
     "id": "conversation-agent",
     "name": "ConversationAgent",
@@ -48,5 +53,4 @@ pinecone_config = {
 }
  
 pinecone=PineconeDB(config=pinecone_config)
-pinecone.get_schema("we they")
 

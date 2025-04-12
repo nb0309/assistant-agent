@@ -18,11 +18,10 @@ class ConversationAgent:
 
         self.messages = [{"role": "system", "content": self.system_prompt}]
 
-        # Start the conversation with the user
         self.start_message = config.get("start_message", "Hi! I’m your AI analyst assistant. What goal are you working on today?")
         self.messages.append({"role": "assistant", "content": self.start_message})
         print(f"\n🤖: {self.start_message}")
-
+        
     def run(self, user_input: str) -> str:
         self.messages.append({"role": "user", "content": user_input})
 
