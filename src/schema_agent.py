@@ -4,6 +4,8 @@ import hashlib
 
 class PineconeDB:
     def __init__(self, config):
+        from fastembed import TextEmbedding
+
         if not config:
             raise ValueError("config is required, pass either a Pinecone client or an API key.")
         

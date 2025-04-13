@@ -22,10 +22,15 @@ def run_sql(sql: str):
             cursor.execute(sql)
 
             if is_select:
+                print("true")
                 rows = cursor.fetchall()
+                print(rows)
                 df = pd.DataFrame(rows, columns=[i[0] for i in cursor.description])
                 return df
             else:
+                # Clear any unread results to avoid the 'Unread result found' error
+                while cursor.nextset():
+                    pass
                 conn.commit()
                 print("Query executed and committed successfully.")
 
@@ -36,6 +41,7 @@ def run_sql(sql: str):
 
         finally:
             cursor.close()
+
 
         
 def extract_sql( llm_response: str) -> str:
@@ -63,19 +69,17 @@ def extract_sql( llm_response: str) -> str:
         sqls = re.findall(r"\bSELECT\b .*?;", llm_response, re.DOTALL | re.IGNORECASE)
         if sqls:
             sql = sqls[-1]
-            print(title="Extracted SQL", message=f"{sql}")
+            print("Extracted SQL:", f"{sql}")
             return sql
 
         sqls = re.findall(r"```sql\s*\n(.*?)```", llm_response, re.DOTALL | re.IGNORECASE)
         if sqls:
             sql = sqls[-1].strip()
-            print(title="Extracted SQL", message=f"{sql}")
             return sql
 
         sqls = re.findall(r"```(.*?)```", llm_response, re.DOTALL | re.IGNORECASE)
         if sqls:
             sql = sqls[-1].strip()
-            print(title="Extracted SQL", message=f"{sql}")
             return sql
 
         return llm_response

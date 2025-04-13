@@ -155,5 +155,5 @@ while True:
     print(f"\n🤖: {me}")
     sql=reply.get("sql")
     print(extract_sql(sql))
-    df=run_sql(extract_sql(sql))
-    df.head()
+    run_sql(extract_sql(sql))
+    

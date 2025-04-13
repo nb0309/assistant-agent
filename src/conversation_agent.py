@@ -24,7 +24,6 @@ class ConversationAgent:
         print(f"\n🤖: {self.start_message}")
 
     def extract_message_and_sql(self, response_text):
-        # Pattern to extract SQL code block
         sql_match = re.search(r"```sql\s*(.*?)```", response_text, re.DOTALL)
 
         if sql_match:
