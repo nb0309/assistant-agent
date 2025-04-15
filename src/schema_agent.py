@@ -39,14 +39,10 @@ class PineconeDB:
         return hashlib.sha256(input.encode('utf-8')).hexdigest()
 
     def insert_schema(self,input:str):
-        id=self.generate_id(input=input)
-        fetch_response=self.host.fetch(ids=[id],namespace="schema")
-        if fetch_response.vectors=={}:
-            self.host.upsert(vectors=[(id, self.generate_embedding(input), {"text": input})], namespace="schema"
-)
-            print(f"Inserted successfully, Id:{id}")
-        else:
-            print("Given input exists")
+        id=self.generate_id(input="schema")
+        self.host.upsert(vectors=[(id, self.generate_embedding(input), {"text": input})], namespace="schema")
+        print(f"Inserted successfully, Id:{id}")
+
 
 
     def insert_description(self,input:str):
@@ -60,14 +56,10 @@ class PineconeDB:
             print("Given input exists")
     
     def insert_relation(self,input:str):
-        id=self.generate_id(input=input)
-        fetch_response=self.host.fetch(ids=[id],namespace="relation")
-        if fetch_response.vectors=={}:
-            self.host.upsert(vectors=[(id, self.generate_embedding(input), {"text": input},)], namespace="relation"
-)
-            print(f"Inserted successfully, Id:{id}")
-        else:
-            print("Given input exists")
+        id=self.generate_id(input="relationship")
+        self.host.upsert(vectors=[(id, self.generate_embedding(input), {"text": input},)], namespace="relation")
+        print(f"Inserted successfully, Id:{id}")
+        
 
 
     def get_schema(self,question:str):

@@ -1,5 +1,7 @@
 from openai import OpenAI
 import openai
+import re
+
 
 class ConversationAgent:
     def __init__(self, config):
@@ -21,14 +23,13 @@ class ConversationAgent:
 
         self.start_message = config.get("start_message", "Hi! I’m your AI analyst assistant. What goal are you working on today?")
         self.messages.append({"role": "assistant", "content": self.start_message})
-        print(f"\n🤖: {self.start_message}")
+        print(f"\nAgent: {self.start_message}")
 
     def extract_message_and_sql(self, response_text):
         sql_match = re.search(r"```sql\s*(.*?)```", response_text, re.DOTALL)
 
         if sql_match:
             sql_code = sql_match.group(1).strip()
-            # Remove the code block to isolate the message
             message = re.sub(r"```sql\s*.*?```", "", response_text, flags=re.DOTALL).strip()
         else:
             sql_code = None
@@ -52,7 +53,7 @@ class ConversationAgent:
         self.messages.append({"role": "assistant", "content": reply})
 
         message, sql_query = self.extract_message_and_sql(reply)
-
+        
         return {
             "message": message,
             "sql": sql_query
@@ -60,5 +61,4 @@ class ConversationAgent:
 
 
 
-import re
 

@@ -8,24 +8,29 @@ from sql_run import extract_sql,run_sql
 
 
 sql_engine=get_mysql_engine(user="root",password="nava",host="localhost",port=3306,db_name="newcompany")
-df=extract_from_csv(filepath="C:/Users/navab/Desktop/assistant agent/src/sample_fintech_users.csv",table_name="newcompany",mysql_engine=sql_engine)
+df=extract_from_csv(filepath="C:/Users/navab/Desktop/assistant agent/src/sample_fintech_users.csv",table_name="customer",mysql_engine=sql_engine)
 
 
 
 pinecone_config = {
     "api_key": "pcsk_4hsai8_RQy75pmEE4zteajMWCERaiJUpPsgdj4KAutntnoms3grffML15zB579LDQ6EqT6",
-    "index_name": "etl",
+    "index_name": "etll",
 
 }
  
 pinecone=PineconeDB(config=pinecone_config)
-with sql_engine.connect() as conn:
-    result = conn.execute(text("SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_SCHEMA = 'newcompany';"))
-a=parse_schema(result,db_name="newcompany")
+def extract_schema(client,db_name):
+    with sql_engine.connect() as conn:
+        result = conn.execute(text("SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_SCHEMA = 'newcompany';"))
+    a=parse_schema(result,db_name)
 
-schema_lines=format_schema_for_embedding(a)
-for schema_line in schema_lines:
-    pinecone.insert_schema(schema_line)
+    schema_lines=format_schema_for_embedding(a)
+    total_schema=""
+    for schema_line in schema_lines:
+        total_schema+=schema_line
+    print(total_schema)
+    client.insert_schema(schema_line)
+extract_schema(pinecone,db_name='newcompany')
 
 with sql_engine.connect() as conn:
     result = conn.execute(text("SELECT TABLE_NAME AS child_table, COLUMN_NAME AS child_column, REFERENCED_TABLE_NAME AS parent_table, REFERENCED_COLUMN_NAME AS parent_column FROM  INFORMATION_SCHEMA.KEY_COLUMN_USAGE WHERE  TABLE_SCHEMA = 'newcompany'  AND REFERENCED_TABLE_NAME IS NOT NULL;"))
@@ -37,12 +42,13 @@ if result:
 description="this is a data that contains information about customers who are leaving a particular company for various reasons. focus on the data types of each column, if the data type does not match the column name, for example if the data type is text and column name is date, then you have to preprocess the column to extract text if possible."
 pinecone.insert_description(description)
 df=df.get("data")
-description=f"{df.head()} this is just an example of the data that is in our database, go through this to have an understanding of how the data is"
+description=f"{df} this is just an example of the data that is in our database, go through this to have an understanding of how the data is"
 pinecone.insert_description(description)
 
 desc=pinecone.get_description("give example of the data")
 
 schema=pinecone.get_schema("give me the schema")
+print(schema)
 relationship=pinecone.get_relation("give me the schema")
 
 
@@ -128,6 +134,7 @@ The relationship between the tables in the database that you will be working wit
 
 Here are some descriptions that you should know about the dataset:
 {desc}
+You are given the dataset for reference, use this as a reference to analyse and give sql query accordingly
 
 """,
         "format": "chat"
@@ -144,16 +151,20 @@ Here are some descriptions that you should know about the dataset:
     "start_message": "Hi! I’m your AI data analyst assistant. What  goal are you working on today?"
 }
 
-
 agent=ConversationAgent(config=conversation_config)
 while True:
-    user_input = input("\nYou: ")
-    if user_input.lower() in ['exit', 'quit']:
+    user_input=input("\n You:")
+    if user_input in ['exit','quit']:
         break
-    reply = agent.run(user_input)
-    me=reply.get("message")
-    print(f"\n🤖: {me}")
-    sql=reply.get("sql")
-    print(extract_sql(sql))
-    run_sql(extract_sql(sql))
-    
+    reply=agent.run(user_input)
+    message=reply.get("message")
+    print(f"Agent:{message}")
+    if reply.get("sql") is not None:
+        sql_query=extract_sql(reply.get("sql"))
+        print("extracted query:",sql_query)
+        df=run_sql(sql_query)
+        if df is not None and not df.empty:
+            print("\n Query Result:")
+            print(df.to_string(index=False)) 
+        else:
+            print("\n No results found or query returned an empty dataset.")

@@ -40,7 +40,6 @@ def extract_from_csv(filepath: str, table_name: str, mysql_engine):
     try:
         df = pd.read_csv(filepath, encoding='latin')
         print(f"\n[CSV] Preview of {filepath}:")
-        print(df.head())
 
         # Store in DB
         df.to_sql(table_name, con=mysql_engine, if_exists='replace', index=False)
@@ -80,7 +79,6 @@ def extract_all_tables_with_relations(source_engine, mysql_engine):
             
             table_data.append({"Table Name": table_name, "Row Count": len(df)})
 
-        # Display tables in a nice format
         table_summary = pd.DataFrame(table_data)
         print("\n[DB] Summary of Tables Processed:")
         print(table_summary.to_string(index=False))
@@ -99,14 +97,12 @@ def parse_schema(raw_schema: list, db_name: str) -> dict:
     table_columns = defaultdict(list)
 
     for row in raw_schema:
-        table = row[2]  # table name
+        table = row[2]  
         column = row[3]
         datatype = row[7]
 
-        # ✅ Filter out rows where the table name is actually the database name
         if table.lower() != db_name.lower():
             table_columns[table].append((column, datatype))
-
     return table_columns
 
 
@@ -121,5 +117,8 @@ def format_schema_for_embedding(table_columns: dict) -> list[str]:
 def format_relationships_for_llm(rows):
     rels = []
     for r in rows:
-        rels.append(f"{r['child_table']}.{r['child_column']} → {r['parent_table']}.{r['parent_column']}")
+        if isinstance(r, dict):
+            rels.append(f"{r['child_table']}.{r['child_column']} → {r['parent_table']}.{r['parent_column']}")
+        else:
+            print(f"Warning: Expected dict, got {type(r)}: {r}")
     return "Relationships:\n" + "\n".join(f"- {r}" for r in rels)
