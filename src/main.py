@@ -63,7 +63,7 @@ conversation_config = {
         "provider": "deepseek",
         "model": "deepseek-chat",
         "api_base": "https://api.deepseek.com",
-        "api_key": "sk-093c3391ec134c55b76decd5225f703a"
+        "api_key": ""
     },
     "prompt": {
         "system": f"""
